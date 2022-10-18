@@ -56,14 +56,10 @@ def ingest_data():
 
             #cuarta columna
             col_tex = []
-            for j in range(4,len(lineas)-4):
+            for j in range(4,len(lineas)):
                 col_tex.append(lineas[j][40:].strip().replace("   "," ").replace("  "," ").replace(".",""))
 
-            col_tex.append(lineas[63][40:].strip().replace("  "," "))
-            col_tex.append(lineas[64][40:].strip().replace("  "," "))
-            col_tex.append(lineas[65][40:].strip().replace("  "," "))
-            col_tex.append(lineas[66][40:].strip().replace("  "," "))
-
+            
             col1 = col_tex[0] + " " + col_tex[1] + " " + col_tex[2] + " " + col_tex[3]
             col2 = col_tex[5] + " " + col_tex[6] + " " + col_tex[7] + " " + col_tex[8] + " " + col_tex[9]
             col3 = col_tex[11] + " " + col_tex[12] + " " + col_tex[13]
